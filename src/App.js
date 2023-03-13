@@ -8,9 +8,9 @@ function App() {
         {id:8391, name:"Watch Lectures", completed: false},
 
     ]);
-    const [show, setShow] = useState(true);
+    const [show, setShow] = useState(true);                  {/* show and hide */}
 
-    function handleDelete(id){
+    function handleDelete(id){                                {/* delete task */}
         setTasks(tasks.filter(task => task.id !== id));
     }
 
@@ -20,7 +20,7 @@ function App() {
         <ul>
             <button className='trigger' onClick={() => setShow(!show)}>Toggle</button>
             { show &&  tasks.map((task) => (
-                <li key={task.id} className={task.completed ? "completed" : "incomplete"}>
+                <li key={task.id} className={task.completed ? "completed" : "incomplete"}>   {/* ternary operator : */}
                     <span>{task.id}-{task.name}</span>
                     <button onClick={() => handleDelete(task.id)} className='delete'>Delete</button>
                 </li>
