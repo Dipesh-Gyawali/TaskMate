@@ -21,7 +21,7 @@
     align-items: center;
     max-width: 1000px;
     margin: auto;
-    border-bottom: 1px solid #d7d7d7;
+    border-bottom: 1px solid var(--theme-border);
     font-size: 18px;
     padding: 0px 10px;
   }
@@ -69,7 +69,7 @@
   button.trigger{
     border: 0px;
     border-radius: 5px;
-    background-color: #0F3460;
+    background-color: var(--theme-button);
     color: #FFFFFF;
     padding: 5px 10px;
     cursor: pointer;
