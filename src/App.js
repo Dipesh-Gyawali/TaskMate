@@ -1,6 +1,7 @@
 import { TaskList } from './components/TaskList';
 import { Header } from './components/Header';
 import './App.css';
+import { Footer } from './components/Footer';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <div className="App">
         <Header />
         <TaskList info={info} />
+        <Footer />
     </div>
   );
 }
