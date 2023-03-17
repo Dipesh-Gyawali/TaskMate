@@ -13,8 +13,9 @@ export const TaskList = ({info}) => {
     const [show, setShow] = useState(true);                    /* show and hide */
 
     const styles = {
-        color: "#be3434",
-        border: "1px solid black",
+        color: show ? "#3D8361" : "#be3434",
+        border: "2px solid",
+        borderColor: show ? "3D8361" : "be3434",
         padding: "20px",
         borderRadius: "5px",
         fontSize: "28px"
@@ -28,7 +29,7 @@ export const TaskList = ({info}) => {
      <section className='tasklist'>
             <h1 style={styles}>Task List</h1>
             <ul>
-                <button className='trigger' onClick={() => setShow(!show)}>Toggle</button>
+                <button className='trigger' onClick={() => setShow(!show)}>{ show ? "Hide" : "Show"}</button>
                 { show &&  tasks.map((task) => (
                     <TaskCard key={task.id} info={info} task={task} handleDelete={handleDelete} />
                 )) }
