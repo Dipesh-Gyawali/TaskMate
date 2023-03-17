@@ -18,7 +18,7 @@ export const TaskList = ({info}) => {
   
     return (
      <section className='tasklist'>
-            <h1>Task List</h1>
+            <h1 style={{color:"#be3434",border:"1px solid black", padding:"20px"}}>Task List</h1>
             <ul>
                 <button className='trigger' onClick={() => setShow(!show)}>Toggle</button>
                 { show &&  tasks.map((task) => (
