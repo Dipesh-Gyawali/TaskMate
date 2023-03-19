@@ -11,7 +11,7 @@
 }
 
 .taskcard li.completed{
-    box-shadow: rgb(62, 150, 0) 0px 1px 4px;
+    box-shadow: rgb(48, 114, 0) 0px 1px 4px;
 }
   
 .taskcard li.incomplete{

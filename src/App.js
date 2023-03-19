@@ -1,17 +1,18 @@
-import { TaskList } from './components/TaskList';
-import { Header } from './components/Header';
-import './App.css';
-import { Footer } from './components/Footer';
+import { Header } from "./components/Header";
+import { AddTask } from "./components/AddTask";
+import { TaskList } from "./components/TaskList";
+import { Footer } from "./components/Footer";
 
+import './App.css';
 
 function App() {
-    const info = "Random";
 
   return (
     <div className="App">
-        <Header />
-        <TaskList info={info} />
-        <Footer />
+      <Header />
+      <AddTask />
+      <TaskList />
+      <Footer />
     </div>
   );
 }
