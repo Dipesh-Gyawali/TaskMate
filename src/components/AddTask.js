@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./AddTask.css";
 
 
-export const AddTask = () => {
+export const AddTask = ({tasks, setTasks}) => {
     const [taskValue, setTaskValue] = useState("");
     const [progress, setProgress] = useState(false);
 
@@ -12,6 +12,7 @@ export const AddTask = () => {
 
     const handleReset = () => {
         setTaskValue("");
+        setProgress(false);
     }
 
     const handleSubmit = (event) => {
@@ -21,7 +22,7 @@ export const AddTask = () => {
             name: taskValue,
             completed: Boolean(progress)
         }
-        console.log(task);
+        setTasks([...tasks, task]);
         handleReset();
     }
 
